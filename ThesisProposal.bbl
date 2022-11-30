@@ -1,0 +1,115 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{balaprakash2018autotuning}{article}{}
+      \name{author}{7}{}{%
+        {{hash=6146c84401fa7b7401495d8599c071e5}{%
+           family={Balaprakash},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=18742b90e3db0845d437c9a24211230c}{%
+           family={Dongarra},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f4ed8d9b105085cee9ab25d3c78e5f42}{%
+           family={Gamblin},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=16fc895952ea8a4ee1d0de9b8888e21e}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5fde31ef585aa59983d45bbb1821ad87}{%
+           family={Hollingsworth},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=1845ee66b60bc51cbe0eb665871b8c83}{%
+           family={Norris},
+           familyi={N\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e1ea3453941c26d6ad3b19b07f533736}{%
+           family={Vuduc},
+           familyi={V\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{81c819678067d15ab3b1371adbb9e983}
+      \strng{fullhash}{81c819678067d15ab3b1371adbb9e983}
+      \strng{bibnamehash}{81c819678067d15ab3b1371adbb9e983}
+      \strng{authorbibnamehash}{81c819678067d15ab3b1371adbb9e983}
+      \strng{authornamehash}{81c819678067d15ab3b1371adbb9e983}
+      \strng{authorfullhash}{81c819678067d15ab3b1371adbb9e983}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0018-9219}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Autotuning in High-Performance Computing Applications}
+      \field{volume}{106}
+      \field{year}{2018}
+      \field{pages}{2068\bibrangedash 2083}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/JPROC.2018.2841200
+      \endverb
+      \keyw{Tuning;Computer architecture;Tools;Runtime;Libraries;Kernel;Standards;High-performance computing;performance tuning programming systems}
+    \endentry
+    \entry{opencl-hierarchy-diagram}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenCL Hierarchy Diagram}
+      \field{urlday}{24}
+      \field{urlmonth}{4}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/OpenCL
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/OpenCL
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

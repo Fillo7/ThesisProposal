@@ -257,7 +257,7 @@
   \hypersetup{linkbordercolor=thesis@color@links}}
 \define@key{thesis@color}{secondary}{%
   \definecolor{thesis@color@secondary}#1}
-\thesis@color@setup{secondary={RGB}{0, 0, 220}}
+\thesis@color@setup{secondary={RGB}{0, 0, 0}}
 \define@key{thesis@color}{tableOdd}{%
   \definecolor{thesis@color@tableOdd}#1}
 \define@key{thesis@color}{tableEven}{%
@@ -374,10 +374,10 @@
   \begin{alwayssingle}%
     \thispagestyle{empty}%
     \begin{center}%
-      \thesis@blocks@universityLogo@color
-      \par\vspace{0.75cm}%
       {\sf\thesis@titlePage@large\thesis@@upper{facultyName}\par}%
       \vfill
+      \thesis@blocks@universityLogo@color
+      \par\vspace{0.75cm}%
       \begingroup
       \thesis@colorbold@true
       {\sffamily\bfseries\thesis@titlePage@Huge\thesis@TeXtitle\par}%
@@ -385,7 +385,7 @@
       \vspace{1.5cm}%
       {\sf\thesis@titlePage@Large\thesis@@{typeName}\par}%
       \vspace{1.5cm}%
-      {\sf\thesis@titlePage@LARGE\thesis@upper{author}\par}%
+      {\sf\thesis@titlePage@LARGE\thesis@{author}\par}%
       \vfill\vfill
       {\sf\thesis@titlePage@large\thesis@@{advisorTitle}: \thesis@advisor\par}%
       \vspace{0.75cm}%
@@ -410,16 +410,7 @@
     \end{center}%
   \end{alwayssingle}}
 \def\thesis@blocks@seal{%
-  \thesis@blocks@clear
-    \begin{alwayssingle}%
-      \thispagestyle{empty}%
-      \begin{center}%
-        \leavevmode
-        \par\vfill
-        \thesis@blocks@facultyLogo@color
-        \par\vfill\vfill\vfill\vfill
-      \end{center}%
-    \end{alwayssingle}}
+  \thesis@blocks@clear}
 \def\thesis@blocks@toc{%
   \thesis@blocks@clear
   \tableofcontents}
