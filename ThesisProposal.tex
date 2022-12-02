@@ -177,44 +177,39 @@ CUDA language is very similar to OpenCL in available features and functionality.
 \end{itemize}
 
 \section{Autotuning}
-This chapter describes common terms used in relation to auto-tuning and provides a list of desired features which should be supported by autotuning frameworks. Afterwards, several generic frameworks are presented, including their advantages, disadvantages, usage examples and comparison. Frameworks which are domain-specific or not publicly available are not discussed here.
+Autotuning is an optimization method which can be utilized for compute kernels. During autotuning, a programmer defines parameters which affect code performance. Each parameter describes a specific type of optimization. These parameters can be combined to create a unique version of a compute kernel. These versions are then launched in order to find a best-performing version for a particular device. The overview of autotuning process is shown in Figure \ref{autotuning-schema}.
 
-\subsection{Auto-tuning glossary}
-The following terms are commonly encountered in subsequent chapters and their knowledge is required for better understanding of auto-tuning process:
+The autotuning can be implemented manually by a programmer but it is more convenient to use an autotuning framework. These frameworks provide common features which are used during development of autotuned applications. The most common functionality involves generating of multiple code versions from tuning parameters, choosing the order in which the code versions are explored and compute kernel execution.
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=125mm]{Figures/AutotuningSchema.png}
+	\end{center}
+	\caption{Autotuning process overview.}
+	\label{autotuning-schema}
+\end{figure}
+
+\subsection{Autotuning glossary}
+The following terms are essential for understanding the autotuning process:
 \begin{itemize}
-	\item \textit{tuning parameter} -- Parameter which, depending on its value, affects performance of a computation. For example, a parameter which controls length of a vector type of some variable. The exact way parameter comes into effect depends on a specific framework. Common option is a utilization of just-in-time compilation and preprocessor macros.
-	\item \textit{configuration space} -- Space which is created as a Cartesian product of all tuning parameters and their values. Certain elements of configuration space may be eliminated by utilizing constraints.
-	\item \textit{tuning configuration} -- Single element of configuration space.
-	\item \textit{traversal of configuration space} -- A process where tuned program is launched repeatedly with different tuning configurations and its running time is measured.
-	\item \textit{search method} -- A method employed to explore individual tuning configurations. Because configuration space may become very large,	exhaustive search is not always a viable option. It is possible to explore the space randomly or utilize an optimization method.
+	\item \textit{Tuning parameter} -- Affects performance of a computation in a specific way. For example, there can be a parameter which controls a length of a vector type of some variable. The exact way a parameter comes into an effect is defined by implementation. A common option is to utilize a combination of just-in-time compilation and preprocessor macros. In this case, the parameter values are exported into the kernel source code and then this version of a kernel is compiled  and launched.
+	\item \textit{Tuning configuration} -- A unique combination of tuning parameter values.
+	\item \textit{Configuration space} -- A space which contains all the possible tuning configurations for a specific autotuning task.
+	\item \textit{Parameter constraints} -- Certain elements of a configuration space may be eliminated by utilizing constraints. These constraints can be used to mark certain tuning configurations as invalid. For example, there can be a configuration which has incompatible combination of tuning parameter values (e.g., due to certain combinations of optimizations being hard or impossible to implement). The configurations eliminated by constraints will never be launched.
+	\item \textit{Configuration space traversal} -- A process where different tuning configurations are selected and launched.
+	\item \textit{Search method} -- A method which affects the order in which the individual configurations are selected during the space traversal. This is needed because the configuration spaces may become very large and exhaustive search is not always possible. For example, a search method may implement heuristics to find a well-performing configuration faster than random search.
 \end{itemize}
 
-\subsection{Features of auto-tuning frameworks}
-While there are no strict requirements over functionality that should be available in auto-tuning frameworks, there are several features which are either commonly implemented by existing frameworks or desired by users. They include the following: 
-\begin{itemize}
-	\item Scope of tuning parameters -- While definition of tuning parameters is supported by essentially all frameworks, not all of them allow parameters to affect all parts of a program. For example, some frameworks support only parameters which affect kernel code but not host code.
-	\item Parameter constraints -- Ability to mark certain tuning configurations as invalid due to incompatible combinations of tuning parameter values. Such configurations should be excluded from configuration space traversal, which can lead to improved usability and performance.
-	\item Advanced search methods -- Support for different methods which offer reasonable performance and quality of results.
-	\item Output validation -- Certain tuning configurations might include code which is experimental or still in development. Tuner should offer an ability to compare the produced output with precomputed reference output and detect differences.
-	\item Usage of kernel compositions -- A computation may utilize multiple kernels in order to produce complete result. The kernels may share some tuning parameters and a framework should be able to generate tuning configurations which support such scenarios.
-	\item Online auto-tuning -- Ability to combine configuration space traversal with regular computation. Output from tested tuning configurations can be immediately utilized in other parts of a program. This is valuable in situations where tuning cannot be done prior to program execution, for example when optimal selection of tuning parameters depends on input.
-	\item Integration into existing software -- Framework should not significantly restrict usage of features which are available in compute APIs. Ideally, users should be able to port native applications into framework without losing access to some of the corresponding compute API functionality.
-	\item User-friendliness and ease of use -- Availability of documentation, tutorials, clean and stable API. Availability of utility methods such as printing of tuning results in common format, debugging support and others.
-\end{itemize}
-
-\subsection{Possibilities for auto-tuning in compute APIs}
+\subsection{Possibilities for autotuning}
 Design of previously described APIs allows for a wide range of optimization opportunities, both inside kernel and host code. These optimizations can be implemented with usage of tuning parameters. While some of the parameters can be utilized only in a limited range of applications, there are also several ones which are relevant for larger number of computation tasks. This section provides a list of some of the most common optimization parameters which are used in code variant auto-tuning:
 
 \begin{itemize}
 	\item Work-group (thread block) dimensions -- Work-group dimensions specify how many work-items are included in a single work-group. Work-groups are executed on compute units, which are mapped onto, for example CPU cores or GPU multiprocessors. Performance of these devices may be vastly different and manually finding an optimal work-group size in combination with other tuning parameters is difficult. The dimensions also indirectly affect cache locality of data, which is a reason why this parameter usually makes an ideal candidate for auto-tuning.
 	\item Usage of vector data types -- Modern processors contain vector registers that allow concurrent execution of a single instruction over multiple data which leads to a significant speed-up of certain types of computations. Kernel compilers attempt to automatically utilize these registers in order to speed up computation without manual code modification. However, automatic vectorization is not always optimal. There is an option to perform manual vectorization by using vector data types which are available in both OpenCL and CUDA. It is possible to control vector length with a tuning parameter, e.g., by using type aliases.
 	\item Data placement in different types of memory -- Section \ref{kernel} described various memory types available in OpenCL, similar memory hierarchy can also be found in CUDA. In many cases, there are more valid memory types to choose from for data placement. The choice can have an effect on performance, for example accessing data from OpenCL local memory is usually faster than using global memory. The problem is that local memory capacity is limited and while on certain devices the data could fit into it, on other devices it would be necessary to use global memory instead. Having a single version of kernel which would utilize only global memory would be inefficient for large number of devices. This can be solved by using tuning parameter which controls the data memory placement.
-	\item Data layout in memory -- Composite data can be organized into memory in multiple ways. For example, data storing 3D vertex coordinates can be split into three separate arrays which are then stored in memory consecutively. Another way to organize the same data is to first put all information about a vertex into a structure and then create an array of these structures. The former layout is commonly referred to as structure of arrays (SoA), while the latter is called array of structures (AoS).
-	
-	The benefit of SoA is that variables with the same data type are stored in contiguous memory, which enables certain devices (e.g., Intel CPUs) to more efficiently utilize vector instructions. Other types of devices such as GPUs support native vector addressing and usage of SoA layout may lead to performance degradation.
-	\item Combining multiple parameters -- In many situations, multiple tuning parameters can be utilized at once in order to further increase performance. However, certain parameters may affect
-	each other. For example, optimal work-group size can be different when data is stored in global memory compared to a situation where it is placed in local memory. This makes it difficult to obtain the best combination manually, especially when many tuning parameters are used. Feasible solution is to automatize this process.
 \end{itemize}
+
+In many situations, multiple tuning parameters can be utilized at once in order to further increase performance. However, certain parameters may affect each other. For example, optimal work-group size can be different when data is stored in global memory compared to a situation where it is placed in local memory. This makes it difficult to obtain the best combination manually, especially when many tuning parameters are used. Feasible solution is to automatize this process.
 
 \chapter{Current state of autotuning}
 Todo
