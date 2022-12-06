@@ -213,6 +213,27 @@ Design of compute kernels allows for many different types of optimizations. Some
 We usually need to combine multiple tuning parameters together in order to further increase kernel performance. The problem is that some parameters may have hidden dependencies. For example, an optimal work-group size can be different when data is stored in a global memory compared to a situation where it is placed in a local memory. This makes it difficult to find the best tuning configuration manually, especially when many tuning parameters are used. The feasible solution is to employ autotuning to accelerate this process.
 
 \chapter{Current state of autotuning}
+Autotuning is a fairly new optimization technique in the area of compute kernels. It was already utilized in real world applications but has not yet reached its full potential. This chapter explores autotuning research and results that were achieved in recent years. 
+
+\section{Offline autotuning}
+During offline tuning kernel configurations are run one after another without user interference. Therefore, this mode separates finding the best configuration and subsequent usage of the tuned kernel in an application. This enables the tuner to implement some optimizations that would otherwise not be possible, for example, caching of read-only buffers over multiple kernel runs under different configurations. By default, the entire configuration space is explored according to the utilized searcher. Kernel output cannot be retrieved during offline tuning because all configurations are launched within a single API call. After the tuning ends, the tuner returns an array of kernel results corresponding to all tested configurations. These structures contain detailed information about tuning, such as execution times of individual kernel functions, the status of computation (i.e., if it has finished successfully) and more. We can save these results for further analysis.
+
+\section{Online autotuning}
+Dynamic (online) tuning combines kernel tuning with regular computation. We can retrieve and use the output from each kernel run like during kernel running. However, we do not specify the configuration under which kernel is run, but the tuner launches a different configuration each time a kernel is launched, similar to offline tuning. This mode does not separate tuning and usage of a tuned kernel but enables both to happen simultaneously. This can be beneficial in situations where offline tuning is impractical (e.g., when the size of kernel input is frequently changed, which causes the optimal configuration to change as well).
+
+\section{Tuning configurations and spaces}
+Todo
+
+\section{Configuration space exploration}
+Todo
+
+\section{Autotuning frameworks}
+Todo
+
+\chapter{Future research in autotuning}
+Todo
+
+\chapter{Conclusion}
 Todo
 
 %%\nocite{*}
