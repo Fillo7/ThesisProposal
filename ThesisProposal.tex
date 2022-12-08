@@ -99,7 +99,7 @@ In recent years, massively parallel devices such as modern CPUs and GPUs have be
 
 However, there is a portability issue with these kernels because devices are manufactured by different vendors and their architectures have distinct properties and performance. This means the kernel code must be tailored for a specific device. This process is time consuming because it is done by expert programmers who must optimize the computation manually. The issue can be solved by autotuning \cite{balaprakash2018autotuning} which is an optimization method that involves code parametrization to create multiple versions of computation. Each of these parameters affects code performance in a specific way and the aim of autotuning is to find a well-performing combination of these parameters that are fit to the device being utilized.
 
-The autotuning can be introduced either manually or by using a framework. The second option makes it significantly easier to integrate autotuning in real-world applications. These frameworks contain many features that would be difficult to implement manually. There are several different ones available to choose from. Kernel Tuning Toolkit is a framework developed at Faculty of Informatics, Masaryk University in Brno. The aim of this thesis is to research and introduce multiple new features into this framework to make the autotuning easier to use in practice.
+The autotuning can be introduced either manually or by using a framework. The second option makes it significantly easier to integrate autotuning in real-world applications. These frameworks contain many features that would be difficult to implement manually. There are several different ones available to choose from. Kernel Tuning Toolkit (KTT) is a framework developed at Faculty of Informatics, Masaryk University in Brno. The aim of this thesis is to research and introduce multiple new features into this framework to make the autotuning easier to use in practice.
 
 \section{Thesis goals}
 In this thesis, we focus on three main autotuning areas. They are the following ones:
@@ -216,12 +216,43 @@ We usually need to combine multiple tuning parameters together in order to furth
 Autotuning is a fairly new optimization technique in the area of compute kernels. It was already utilized in real world applications but has not yet reached its full potential. This chapter explores autotuning research and results that were achieved in recent years. 
 
 \section{Offline autotuning}
-During offline tuning kernel configurations are run one after another without user interference. Therefore, this mode separates finding the best configuration and subsequent usage of the tuned kernel in an application. This enables the tuner to implement some optimizations that would otherwise not be possible, for example, caching of read-only buffers over multiple kernel runs under different configurations. By default, the entire configuration space is explored according to the utilized searcher. Kernel output cannot be retrieved during offline tuning because all configurations are launched within a single API call. After the tuning ends, the tuner returns an array of kernel results corresponding to all tested configurations. These structures contain detailed information about tuning, such as execution times of individual kernel functions, the status of computation (i.e., if it has finished successfully) and more. We can save these results for further analysis.
+During offline tuning, kernel configurations are run in a succession without user interference. This mode therefore separates finding the best configuration from subsequent usage of the tuned kernel in applications because output data from kernel cannot be used. The configuration space is explored in order that depends on the utilized search method. After the tuning ends, the results containing the performance data can be saved for further usage. For example, the configuration from the best result can be exported into an actual application and the results can also be further analyzed to find dependencies between tuning parameters.
+
+Offline tuning was utilized to optimize 3D Fourier reconstruction which is one of the computationally demanding steps in the image reconstruction pipeline in cryo-electron microscopy \cite{strelak2019gpu}. It is the process where 2D samples of arbitrary orientation are inserted into the 3D volume using a bell-shaped interpolation. The implementation was done with KTT framework and it can be tuned for specific hardware and sample resolution.
 
 \section{Online autotuning}
-Dynamic (online) tuning combines kernel tuning with regular computation. We can retrieve and use the output from each kernel run like during kernel running. However, we do not specify the configuration under which kernel is run, but the tuner launches a different configuration each time a kernel is launched, similar to offline tuning. This mode does not separate tuning and usage of a tuned kernel but enables both to happen simultaneously. This can be beneficial in situations where offline tuning is impractical (e.g., when the size of kernel input is frequently changed, which causes the optimal configuration to change as well).
+Online (dynamic) tuning combines kernel tuning with regular computation so both can happen simultaneously \cite{petrovic2020benchmark}. Each time a kernel is launched, the tuner picks a different configuration, based on the search algorithm. We can retrieve and use the output from each kernel run which is a significant advantage compared to offline tuning. This is beneficial in situations where offline tuning is impractical, for example when the size of kernel input is frequently changed which causes the optimal configuration to change as well. That is because the optimal parameters are affected by the input size and when the size is significantly changed, the optimal parameters are often changed as well.
 
-\section{Tuning configurations and spaces}
+Online tuning was experimentally evaluated in 3D Fourier reconstruction using the KTT framework. In that case, the following sources of overhead were found:
+
+\begin{itemize}
+	\item Just-in-time compilation of compute kernels which needs to happen each time a new tuning configuration is explored.
+	\item Execution of underperforming kernels.
+	\item Enforced synchronization between tuning runs which is needed to collect accurate performance data.
+\end{itemize}
+
+These overheads are relevant during the tuning phase only (i.e., when new tuning configurations are explored). However, the overhead becomes negligible when a sufficient number of tuned kernel invocations is performed with the optimal configuration. We can upper-bound the performance of dynamically tuned code by the performance of offline tuned code which uses the same setup (this is not always feasible in practice, as not all combinations of hardware and input can be explored in a reasonable time).
+
+The experiment was performed using real-world setup, processing 1,826,160 samples in resolution $156 \times 156$. In this experiment, the tuning is performed at the beginning of the computation when both the used hardware and the sample size are already known. The performance of the dynamically tuned code is compared to the performance of best configuration found during the offline tuning. We have measured dynamically tuned code in two settings. First, we let KTT perform 50 search steps with a random search and then continue with the fastest kernel found. Second, we perform exhaustive search and continue with the optimal configuration. As the random search was used, the experiment was repeated 100 times and processed statistically. The results are shown in Table \ref{fourier-dynamic}. The performance obtained with the dynamic tuning ranges between 88\% and 96\% of the performance of optimal configuration when 50 configurations are explored.
+
+\begin{table}
+	\centering
+	\small
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		& Best runtime & 50 configurations & Exhaustive\\
+		\hline
+		RTX 2080Ti & 1m40s  & 88\% $\pm$ 3\% & 54\% \\
+		GTX 1070   & 5m49s  & 96\% $\pm$ 2\% & 79\% \\
+		GTX 750    & 16m59s & 92\% $\pm$ 4\% & 72\% \\
+		GTX 680	   & 15m12s & 94\% $\pm$ 2\% & 75\% \\
+		\hline
+	\end{tabular}
+	\caption{The relative performance of dynamically tuned 3D Fourier reconstruction compared to offline tuned version.}
+	\label{fourier-dynamic}
+\end{table}
+
+\section{Large tuning configuration spaces}
 Todo
 
 \section{Configuration space exploration}
@@ -236,7 +267,7 @@ Todo
 \chapter{Conclusion}
 Todo
 
-%%\nocite{*}
+\nocite{*}
 \printbibliography[heading=bibintoc]
 
 \appendix

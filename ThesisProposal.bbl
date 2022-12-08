@@ -57,11 +57,11 @@
            given={R.},
            giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{81c819678067d15ab3b1371adbb9e983}
+      \strng{namehash}{0e035d51b7f3b3ac617e653409bdb96b}
       \strng{fullhash}{81c819678067d15ab3b1371adbb9e983}
-      \strng{bibnamehash}{81c819678067d15ab3b1371adbb9e983}
-      \strng{authorbibnamehash}{81c819678067d15ab3b1371adbb9e983}
-      \strng{authornamehash}{81c819678067d15ab3b1371adbb9e983}
+      \strng{bibnamehash}{0e035d51b7f3b3ac617e653409bdb96b}
+      \strng{authorbibnamehash}{0e035d51b7f3b3ac617e653409bdb96b}
+      \strng{authornamehash}{0e035d51b7f3b3ac617e653409bdb96b}
       \strng{authorfullhash}{81c819678067d15ab3b1371adbb9e983}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -107,6 +107,681 @@
       \endverb
       \verb{url}
       \verb https://de.wikipedia.org/wiki/OpenCL
+      \endverb
+    \endentry
+    \entry{strelak2019gpu}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a005f824e4b1650f25f6262a11c2a027}{%
+           family={Střelák},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5044ccb769f59b0a5ca814b50a203c5b}{%
+           family={Sorzano},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi O.\bibnamedelimi S.},
+           giveni={C\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=de0a13e619f8198994a87e130623947f}{%
+           family={Carazo},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a99bb75156bf9b7050df12df9cfb4b8f}{%
+           family={Filipovič},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{07f0055e9d5d1bbd3f8037b53fab7b39}
+      \strng{fullhash}{edde375b27c96f3b0bb6937357bb4337}
+      \strng{bibnamehash}{07f0055e9d5d1bbd3f8037b53fab7b39}
+      \strng{authorbibnamehash}{07f0055e9d5d1bbd3f8037b53fab7b39}
+      \strng{authornamehash}{07f0055e9d5d1bbd3f8037b53fab7b39}
+      \strng{authorfullhash}{edde375b27c96f3b0bb6937357bb4337}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of High Performance Computing Applications}
+      \field{title}{A {GPU} Acceleration of {3D} {Fourier} Reconstruction in {Cryo-EM}}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1177/1094342019832958
+      \endverb
+    \endentry
+    \entry{petrovic2020benchmark}{article}{}
+      \name{author}{7}{}{%
+        {{hash=906942133329a17d9d03ca203c1bf702}{%
+           family={Petrovič},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a005f824e4b1650f25f6262a11c2a027}{%
+           family={Střelák},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f0ef6ebbf71ea39bb34c3e2c1499998b}{%
+           family={Hozzová},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=30766eb3fa2151c6d06c12f7f0a9a5e8}{%
+           family={Oľha},
+           familyi={O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cbabb9eca419bd677b19b654c3d657be}{%
+           family={Trembecký},
+           familyi={T\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ffbbb778d13e6d6f4b447ce1cc161e1d}{%
+           family={Benkner},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a99bb75156bf9b7050df12df9cfb4b8f}{%
+           family={Filipovič},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e58a145614051cc4df1970aaa209ac85}
+      \strng{fullhash}{6ddbd561edf1903b6f067a62f80103e2}
+      \strng{bibnamehash}{e58a145614051cc4df1970aaa209ac85}
+      \strng{authorbibnamehash}{e58a145614051cc4df1970aaa209ac85}
+      \strng{authornamehash}{e58a145614051cc4df1970aaa209ac85}
+      \strng{authorfullhash}{6ddbd561edf1903b6f067a62f80103e2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Future Generation Computer Systems}
+      \field{title}{A benchmark set of highly-efficient {CUDA} and {OpenCL} kernels and its dynamic autotuning with Kernel Tuning Toolkit}
+      \field{volume}{108}
+      \field{year}{2020}
+      \field{pages}{161\bibrangedash 177}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.future.2020.02.069
+      \endverb
+    \endentry
+    \entry{sund_bat_2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1556afcfc924eb067c7a190a283b7e13}{%
+           family={Sund},
+           familyi={S\bibinitperiod},
+           given={Ingunn},
+           giveni={I\bibinitperiod}}}%
+        {{hash=97d2ac9da15136e7ebd78e9eda129019}{%
+           family={Kirkhorn},
+           familyi={K\bibinitperiod},
+           given={Knut\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d275b4eb5e8eba0a037d0ccd47958e81}{%
+           family={Tørring},
+           familyi={T\bibinitperiod},
+           given={Jacob\bibnamedelima O.},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=2a7bd653503608e65feb8445917fea28}{%
+           family={Elster},
+           familyi={E\bibinitperiod},
+           given={Anne.\bibnamedelimi C},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{5fd8dc84a3c91f05266b5520fd67708f}
+      \strng{fullhash}{bad2cbd386b16e8955bf23a8dd419285}
+      \strng{bibnamehash}{5fd8dc84a3c91f05266b5520fd67708f}
+      \strng{authorbibnamehash}{5fd8dc84a3c91f05266b5520fd67708f}
+      \strng{authornamehash}{5fd8dc84a3c91f05266b5520fd67708f}
+      \strng{authorfullhash}{bad2cbd386b16e8955bf23a8dd419285}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{issn}{1892-0721}
+      \field{journaltitle}{Norsk {IKT}-konferanse for forskning og utdanning}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{note}{Number: 1}
+      \field{number}{1}
+      \field{title}{{BAT}: A Benchmark suite for {AutoTuners}}
+      \field{urlday}{10}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{44\bibrangedash 57}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb https://ojs.bibsys.no/index.php/NIK/article/view/915
+      \endverb
+      \verb{url}
+      \verb https://ojs.bibsys.no/index.php/NIK/article/view/915
+      \endverb
+    \endentry
+    \entry{ytopt2021}{article}{}
+      \name{author}{7}{}{%
+        {{hash=9113b5835843309fa06504ea7ee28c1d}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=3ac74f5b63bfadfa3422b77fb1a7b584}{%
+           family={Kruse},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6146c84401fa7b7401495d8599c071e5}{%
+           family={Balaprakash},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a3e4749219fa338c3a69e1ee1c6b94b5}{%
+           family={Finkel},
+           familyi={F\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=051abe8a0cc4fd396767a41dd5c76a1b}{%
+           family={Hovland},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b218924f44a87cf2cd4cacabe2156378}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=16fc895952ea8a4ee1d0de9b8888e21e}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4509f05d273901165926b27703595a3d}
+      \strng{fullhash}{b3f14f60a7f70d935efbc33bd49d4d58}
+      \strng{bibnamehash}{4509f05d273901165926b27703595a3d}
+      \strng{authorbibnamehash}{4509f05d273901165926b27703595a3d}
+      \strng{authornamehash}{4509f05d273901165926b27703595a3d}
+      \strng{authorfullhash}{b3f14f60a7f70d935efbc33bd49d4d58}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1532-0626}
+      \field{journaltitle}{Concurrency and Computation. Practice and Experience}
+      \field{title}{Autotuning PolyBench benchmarks with LLVM Clang/Polly loop optimization pragmas using Bayesian optimization (extended version)}
+      \field{volume}{11}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1002/cpe.6683
+      \endverb
+    \endentry
+    \entry{nugteren2015cltune}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=02bfd20578d2d7ba26de641f3bbac998}{%
+           family={Nugteren},
+           familyi={N\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=15b0a1515e99d752376a694f7714291c}{%
+           family={Codreanu},
+           familyi={C\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c9333750e863e872c275590c4ef2e94}
+      \strng{fullhash}{1c9333750e863e872c275590c4ef2e94}
+      \strng{bibnamehash}{1c9333750e863e872c275590c4ef2e94}
+      \strng{authorbibnamehash}{1c9333750e863e872c275590c4ef2e94}
+      \strng{authornamehash}{1c9333750e863e872c275590c4ef2e94}
+      \strng{authorfullhash}{1c9333750e863e872c275590c4ef2e94}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE 9th International Symposium on Embedded Multicore/Many-core Systems-on-Chip ({MCSoC})}
+      \field{title}{{CLTune}: A Generic Auto-Tuner for {OpenCL} Kernels}
+      \field{year}{2015}
+      \true{nocite}
+    \endentry
+    \entry{filipovic2017autotuning}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=a99bb75156bf9b7050df12df9cfb4b8f}{%
+           family={Filipovič},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=906942133329a17d9d03ca203c1bf702}{%
+           family={Petrovič},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ffbbb778d13e6d6f4b447ce1cc161e1d}{%
+           family={Benkner},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ab37ca6ca87130b4af8dc558e7a4e25}
+      \strng{fullhash}{0ab37ca6ca87130b4af8dc558e7a4e25}
+      \strng{bibnamehash}{0ab37ca6ca87130b4af8dc558e7a4e25}
+      \strng{authorbibnamehash}{0ab37ca6ca87130b4af8dc558e7a4e25}
+      \strng{authornamehash}{0ab37ca6ca87130b4af8dc558e7a4e25}
+      \strng{authorfullhash}{0ab37ca6ca87130b4af8dc558e7a4e25}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 1st Workshop on AutotuniNg and aDaptivity AppRoaches for Energy Efficient HPC Systems ({ANDARE '17})}
+      \field{title}{Autotuning of {OpenCL} Kernels with Global Optimizations}
+      \field{year}{2017}
+      \true{nocite}
+    \endentry
+    \entry{rasch2018atf}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3be560821eec03c7890567e19148ebe3}{%
+           family={Rasch},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=309ca97f196603322a5af1964d083498}{%
+           family={Gorlatch},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d54794220d1c0bda0e9e8ce975c62838}
+      \strng{fullhash}{d54794220d1c0bda0e9e8ce975c62838}
+      \strng{bibnamehash}{d54794220d1c0bda0e9e8ce975c62838}
+      \strng{authorbibnamehash}{d54794220d1c0bda0e9e8ce975c62838}
+      \strng{authornamehash}{d54794220d1c0bda0e9e8ce975c62838}
+      \strng{authorfullhash}{d54794220d1c0bda0e9e8ce975c62838}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Concurrency and Computation: Practice and Experience}
+      \field{number}{0}
+      \field{title}{{ATF}: A generic directive-based auto-tuning framework}
+      \field{volume}{0}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{e4423}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1002/cpe.4423
+      \endverb
+    \endentry
+    \entry{ansel2014opentuner}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=f14e35b5ab999cff093cc02318f1b450}{%
+           family={Ansel},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e9cf752c87cfd91b1ef3fe6044be9cb1}{%
+           family={Kamil},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9b0127ccb5e318c8fedd3fdb21942ebe}{%
+           family={Veeramachaneni},
+           familyi={V\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2890ca5ebb9bb8c1f246bd26b4d011d3}{%
+           family={Ragan-Kelley},
+           familyi={R\bibinithyphendelim K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=460d60a56394cf2dae2142d5bad3d318}{%
+           family={Bosboom},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fbca4c3b8c1b1fe3ff8f2ecbfdfb248a}{%
+           family={O'Reilly},
+           familyi={O\bibinitperiod},
+           given={U.-M.},
+           giveni={U\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=4c29fc25e26d999ffd7b9dc50f9547c8}{%
+           family={Amarasinghe},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{53a2be63b5034e7e6a22ff6332991ffb}
+      \strng{fullhash}{d7c3bb401e5d5153c5feb34fa70e6492}
+      \strng{bibnamehash}{53a2be63b5034e7e6a22ff6332991ffb}
+      \strng{authorbibnamehash}{53a2be63b5034e7e6a22ff6332991ffb}
+      \strng{authornamehash}{53a2be63b5034e7e6a22ff6332991ffb}
+      \strng{authorfullhash}{d7c3bb401e5d5153c5feb34fa70e6492}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 23rd International Conference on Parallel Architectures and Compilation}
+      \field{isbn}{978-1-4503-2809-8}
+      \field{series}{PACT '14}
+      \field{title}{{OpenTuner}: An Extensible Framework for Program Autotuning}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{303\bibrangedash 316}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/2628071.2628092
+      \endverb
+    \endentry
+    \entry{vanwerkhoven2018kernel}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d0f0b9c5c90ffc1db8bc983e98f41f21}{%
+           family={Werkhoven},
+           familyi={W\bibinitperiod},
+           given={B.\bibnamedelimi van},
+           giveni={B\bibinitperiod\bibinitdelim v\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0f0b9c5c90ffc1db8bc983e98f41f21}
+      \strng{fullhash}{d0f0b9c5c90ffc1db8bc983e98f41f21}
+      \strng{bibnamehash}{d0f0b9c5c90ffc1db8bc983e98f41f21}
+      \strng{authorbibnamehash}{d0f0b9c5c90ffc1db8bc983e98f41f21}
+      \strng{authornamehash}{d0f0b9c5c90ffc1db8bc983e98f41f21}
+      \strng{authorfullhash}{d0f0b9c5c90ffc1db8bc983e98f41f21}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0167-739X}
+      \field{journaltitle}{Future Generation Computer Systems}
+      \field{title}{Kernel Tuner: A search-optimizing GPU code auto-tuner}
+      \field{volume}{90}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{347\bibrangedash 358}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.future.2018.08.004
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0167739X18313359
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0167739X18313359
+      \endverb
+    \endentry
+    \entry{rasch2017atf}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=3be560821eec03c7890567e19148ebe3}{%
+           family={{Rasch}},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=36769e4dd9354041d2f7d88b742dee6e}{%
+           family={{Haidl}},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=309ca97f196603322a5af1964d083498}{%
+           family={{Gorlatch}},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{488fba256d90c9559a993589e8fa6fcd}
+      \strng{fullhash}{488fba256d90c9559a993589e8fa6fcd}
+      \strng{bibnamehash}{488fba256d90c9559a993589e8fa6fcd}
+      \strng{authorbibnamehash}{488fba256d90c9559a993589e8fa6fcd}
+      \strng{authornamehash}{488fba256d90c9559a993589e8fa6fcd}
+      \strng{authorfullhash}{488fba256d90c9559a993589e8fa6fcd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE 19th International Conference on High Performance Computing and Communications; IEEE 15th International Conference on Smart City; IEEE 3rd International Conference on Data Science and Systems (HPCC/SmartCity/DSS)}
+      \field{title}{{ATF}: A Generic Auto-Tuning Framework}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1109/HPCC-SmartCity-DSS.2017.9
+      \endverb
+    \endentry
+    \entry{olha2020exploiting}{article}{}
+      \name{author}{4}{}{%
+        {{hash=30766eb3fa2151c6d06c12f7f0a9a5e8}{%
+           family={Oľha},
+           familyi={O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f0ef6ebbf71ea39bb34c3e2c1499998b}{%
+           family={Hozzová},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=52dffa6b4c0c42e22520dfc6feaf39e2}{%
+           family={Fousek},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a99bb75156bf9b7050df12df9cfb4b8f}{%
+           family={Filipovič},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab040484f445c134133a21b2dd279602}
+      \strng{fullhash}{05da3645a5b0f69b96fae32186ce61fe}
+      \strng{bibnamehash}{ab040484f445c134133a21b2dd279602}
+      \strng{authorbibnamehash}{ab040484f445c134133a21b2dd279602}
+      \strng{authornamehash}{ab040484f445c134133a21b2dd279602}
+      \strng{authorfullhash}{05da3645a5b0f69b96fae32186ce61fe}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Concurrency and Computation: Practice and Experience}
+      \field{number}{21}
+      \field{title}{Exploiting Historical Data: Pruning Autotuning Spaces and Estimating the Number of Tuning Steps}
+      \field{volume}{32}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1002/cpe.5962
+      \endverb
+    \endentry
+    \entry{filipovic2021cuda}{article}{}
+      \name{author}{5}{}{%
+        {{hash=a99bb75156bf9b7050df12df9cfb4b8f}{%
+           family={Filipovič},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f0ef6ebbf71ea39bb34c3e2c1499998b}{%
+           family={Hozzová},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=166a3676bb54ca3f6e8e6709f1e1a3b8}{%
+           family={Nezarat},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=30766eb3fa2151c6d06c12f7f0a9a5e8}{%
+           family={Oľha},
+           familyi={O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=906942133329a17d9d03ca203c1bf702}{%
+           family={Petrovič},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
+      \strng{fullhash}{6752f249c848a29ed163eca3d0afd195}
+      \strng{bibnamehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
+      \strng{authorbibnamehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
+      \strng{authornamehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
+      \strng{authorfullhash}{6752f249c848a29ed163eca3d0afd195}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Data in Brief}
+      \field{title}{Searching {CUDA} code autotuning spaces with hardware performance counters: data from benchmarks running on various {GPU} architectures}
+      \field{year}{2021 in press}
+      \true{nocite}
+    \endentry
+    \entry{liu2021gptune}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=621013bf54d3546375ad71f17f020b5b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dbc14c423cf483463534586d4f65a839}{%
+           family={Sid-Lakhdar},
+           familyi={S\bibinithyphendelim L\bibinitperiod},
+           given={Wissam\bibnamedelima M},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=acb43ff02c95a18d6484c245b7c39455}{%
+           family={Marques},
+           familyi={M\bibinitperiod},
+           given={Osni},
+           giveni={O\bibinitperiod}}}%
+        {{hash=7cfeb85dce9e83c26ebd06783ce09b54}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Xinran},
+           giveni={X\bibinitperiod}}}%
+        {{hash=080066d02503e4ee12f121a1448f447a}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Chang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e695aa321898b526ee50457fe1e0e9cc}{%
+           family={Demmel},
+           familyi={D\bibinitperiod},
+           given={James\bibnamedelima W},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=7317df0b3868c329dff3fbb48084588f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xiaoye\bibnamedelima S},
+           giveni={X\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{df83681b9acfd53a0c867d0eb509f8f3}
+      \strng{fullhash}{98134bc6305a0d2efff040f5d56a8ab3}
+      \strng{bibnamehash}{df83681b9acfd53a0c867d0eb509f8f3}
+      \strng{authorbibnamehash}{df83681b9acfd53a0c867d0eb509f8f3}
+      \strng{authornamehash}{df83681b9acfd53a0c867d0eb509f8f3}
+      \strng{authorfullhash}{98134bc6305a0d2efff040f5d56a8ab3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 26th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming}
+      \field{title}{GPTune: multitask learning for autotuning exascale applications}
+      \field{year}{2021}
+      \true{nocite}
+      \field{pages}{234\bibrangedash 246}
+      \range{pages}{13}
+    \endentry
+    \entry{nardi2019practical}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=ff21c975484f253b4daf2a4884e31e23}{%
+           family={Nardi},
+           familyi={N\bibinitperiod},
+           given={Luigi},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fbccb2d14c9adcfdafac58cfd57dc1d1}{%
+           family={Koeplinger},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c61a7de5f04815ccf23f05ec7f00c36a}{%
+           family={Olukotun},
+           familyi={O\bibinitperiod},
+           given={Kunle},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f1f45c826f1ba25a46124b424b425bf4}
+      \strng{fullhash}{f1f45c826f1ba25a46124b424b425bf4}
+      \strng{bibnamehash}{f1f45c826f1ba25a46124b424b425bf4}
+      \strng{authorbibnamehash}{f1f45c826f1ba25a46124b424b425bf4}
+      \strng{authornamehash}{f1f45c826f1ba25a46124b424b425bf4}
+      \strng{authorfullhash}{f1f45c826f1ba25a46124b424b425bf4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 IEEE 27th International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS)}
+      \field{title}{Practical design space exploration}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{347\bibrangedash 358}
+      \range{pages}{12}
+    \endentry
+    \entry{filipovic2022using}{article}{}
+      \name{author}{5}{}{%
+        {{hash=a99bb75156bf9b7050df12df9cfb4b8f}{%
+           family={Filipovič},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f0ef6ebbf71ea39bb34c3e2c1499998b}{%
+           family={Hozzová},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1a898120ddf8dddda997f151da6ed0e0}{%
+           family={A.},
+           familyi={A\bibinitperiod},
+           given={Nezarat},
+           giveni={N\bibinitperiod}}}%
+        {{hash=30766eb3fa2151c6d06c12f7f0a9a5e8}{%
+           family={Oľha},
+           familyi={O\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=906942133329a17d9d03ca203c1bf702}{%
+           family={Petrovič},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
+      \strng{fullhash}{687506f704e94e72623981da1eb77d7f}
+      \strng{bibnamehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
+      \strng{authorbibnamehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
+      \strng{authornamehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
+      \strng{authorfullhash}{687506f704e94e72623981da1eb77d7f}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0743-7315}
+      \field{journaltitle}{Journal of Parallel and Distributed Computing}
+      \field{title}{Using hardware performance counters to speed up autotuning convergence on GPUs}
+      \field{volume}{160}
+      \field{year}{2022}
+      \true{nocite}
+      \field{pages}{16\bibrangedash 35}
+      \range{pages}{20}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jpdc.2021.10.003
       \endverb
     \endentry
   \enddatalist
