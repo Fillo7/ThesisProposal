@@ -207,6 +207,49 @@
       \verb 10.1016/j.future.2020.02.069
       \endverb
     \endentry
+    \entry{rash2021configurations}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3be560821eec03c7890567e19148ebe3}{%
+           family={Rasch},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=78e5da50ee56f4f0e18efbca804e6db9}{%
+           family={Schulze},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7a5905a0ab4575de042313dea1378931}{%
+           family={Steuwer},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=309ca97f196603322a5af1964d083498}{%
+           family={Gorlatch},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9ef33eb6697de92e9b44ab0ec2d243b}
+      \strng{fullhash}{9ad3f55c91aecf0dcb214ff1800cdf8a}
+      \strng{bibnamehash}{c9ef33eb6697de92e9b44ab0ec2d243b}
+      \strng{authorbibnamehash}{c9ef33eb6697de92e9b44ab0ec2d243b}
+      \strng{authornamehash}{c9ef33eb6697de92e9b44ab0ec2d243b}
+      \strng{authorfullhash}{9ad3f55c91aecf0dcb214ff1800cdf8a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Trans. Archit. Code Optim.}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Efficient Auto-Tuning of Parallel Programs with Interdependent Tuning Parameters via Auto-Tuning Framework (ATF)}
+      \field{volume}{18}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1145/3427093
+      \endverb
+    \endentry
     \entry{sund_bat_2021}{article}{}
       \name{author}{4}{}{%
         {{hash=1556afcfc924eb067c7a190a283b7e13}{%
@@ -236,8 +279,8 @@
       \strng{authorbibnamehash}{5fd8dc84a3c91f05266b5520fd67708f}
       \strng{authornamehash}{5fd8dc84a3c91f05266b5520fd67708f}
       \strng{authorfullhash}{bad2cbd386b16e8955bf23a8dd419285}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{14}
@@ -308,8 +351,8 @@
       \strng{authorbibnamehash}{4509f05d273901165926b27703595a3d}
       \strng{authornamehash}{4509f05d273901165926b27703595a3d}
       \strng{authorfullhash}{b3f14f60a7f70d935efbc33bd49d4d58}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1532-0626}
@@ -341,8 +384,8 @@
       \strng{authorbibnamehash}{1c9333750e863e872c275590c4ef2e94}
       \strng{authornamehash}{1c9333750e863e872c275590c4ef2e94}
       \strng{authorfullhash}{1c9333750e863e872c275590c4ef2e94}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE 9th International Symposium on Embedded Multicore/Many-core Systems-on-Chip ({MCSoC})}
@@ -407,9 +450,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Concurrency and Computation: Practice and Experience}
-      \field{number}{0}
       \field{title}{{ATF}: A generic directive-based auto-tuning framework}
-      \field{volume}{0}
       \field{year}{2018}
       \true{nocite}
       \field{pages}{e4423}
@@ -514,42 +555,6 @@
       \verb http://www.sciencedirect.com/science/article/pii/S0167739X18313359
       \endverb
     \endentry
-    \entry{rasch2017atf}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=3be560821eec03c7890567e19148ebe3}{%
-           family={{Rasch}},
-           familyi={R\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=36769e4dd9354041d2f7d88b742dee6e}{%
-           family={{Haidl}},
-           familyi={H\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=309ca97f196603322a5af1964d083498}{%
-           family={{Gorlatch}},
-           familyi={G\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{488fba256d90c9559a993589e8fa6fcd}
-      \strng{fullhash}{488fba256d90c9559a993589e8fa6fcd}
-      \strng{bibnamehash}{488fba256d90c9559a993589e8fa6fcd}
-      \strng{authorbibnamehash}{488fba256d90c9559a993589e8fa6fcd}
-      \strng{authornamehash}{488fba256d90c9559a993589e8fa6fcd}
-      \strng{authorfullhash}{488fba256d90c9559a993589e8fa6fcd}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2017 IEEE 19th International Conference on High Performance Computing and Communications; IEEE 15th International Conference on Smart City; IEEE 3rd International Conference on Data Science and Systems (HPCC/SmartCity/DSS)}
-      \field{title}{{ATF}: A Generic Auto-Tuning Framework}
-      \field{year}{2017}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.1109/HPCC-SmartCity-DSS.2017.9
-      \endverb
-    \endentry
     \entry{olha2020exploiting}{article}{}
       \name{author}{4}{}{%
         {{hash=30766eb3fa2151c6d06c12f7f0a9a5e8}{%
@@ -631,8 +636,8 @@
       \strng{authornamehash}{fb6b6204ba44c2bcc69596c2bd2f7188}
       \strng{authorfullhash}{6752f249c848a29ed163eca3d0afd195}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Data in Brief}

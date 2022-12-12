@@ -193,13 +193,25 @@ The autotuning can be implemented manually by a programmer but it is more conven
 \subsection{Autotuning glossary}
 The following terms are essential for understanding the autotuning process:
 \begin{itemize}
-	\item \textit{Tuning parameter} -- Affects performance of a computation in a specific way. For example, there can be a parameter which controls a length of a vector type of some variable. The exact way a parameter comes into an effect is defined by implementation. A common option is to utilize a combination of just-in-time compilation and preprocessor macros. In this case, the parameter values are exported into the kernel source code and then this version of a kernel is compiled  and launched.
+	\item \textit{Tuning parameter} -- Affects performance of a computation in a specific way. For example, there can be a parameter which controls a length of a vector type of some variable. The exact way a parameter comes into an effect is defined by implementation. A common option is to utilize a combination of just-in-time compilation and preprocessor macros. In this case, the parameter values are exported into the kernel source code and this version of a kernel is then compiled  and launched.
 	\item \textit{Tuning configuration} -- A unique combination of tuning parameter values.
 	\item \textit{Configuration space} -- A space which contains all the possible tuning configurations for a specific autotuning task.
 	\item \textit{Parameter constraints} -- Certain elements of a configuration space may be eliminated by utilizing constraints. These constraints can be used to mark certain tuning configurations as invalid. For example, there can be a configuration which has incompatible combination of tuning parameter values (e.g., due to certain combinations of optimizations being hard or impossible to implement). The configurations eliminated by constraints will never be launched.
 	\item \textit{Configuration space traversal} -- A process where different tuning configurations are selected and launched.
 	\item \textit{Search method} -- A method which affects the order in which the individual configurations are selected during the space traversal. This is needed because the configuration spaces may become very large and exhaustive search is not always possible. For example, a search method may implement heuristics to find a well-performing configuration faster than random search.
 \end{itemize}
+
+\begin{figure}
+\begin{lstlisting}
+WORK_GROUP_SIZE_X: [8, 16, 24, 32]
+WORK_GROUP_SIZE_Y: [1, 2, 3, 4, 5, 6, 7, 8]
+
+// The minimum work-group size is at least 64.
+WORK_GROUP_SIZE_X * WORK_GROUP_SIZE_Y >= 64
+\end{lstlisting}
+\caption{Example of tuning parameters and constraints.}
+\label{vector_addition}
+\end{figure}
 
 \subsection{Possibilities for autotuning}
 Design of compute kernels allows for many different types of optimizations. Some optimizations can be implemented only in specific cases, others are more generic and relevant for larger number of applications. The following list describes some of the common optimization parameters which can be implemented in many cases:
@@ -240,7 +252,7 @@ The experiment was performed using real-world setup, processing 1,826,160 sample
 	\small
 	\begin{tabular}{|l|r|r|r|}
 		\hline
-		& Best runtime & 50 configurations & Exhaustive\\
+		Device & Best runtime & 50 configurations & Exhaustive\\
 		\hline
 		RTX 2080Ti & 1m40s  & 88\% $\pm$ 3\% & 54\% \\
 		GTX 1070   & 5m49s  & 96\% $\pm$ 2\% & 79\% \\
@@ -253,7 +265,15 @@ The experiment was performed using real-world setup, processing 1,826,160 sample
 \end{table}
 
 \section{Large tuning configuration spaces}
-Todo
+The number of tuning configurations grows with the number of tuning parameters as well as with the number of possible values within a single parameter. The size of configuration space can grow very large and in combination with constraints, it can quickly become impossible to generate and explore more complex spaces. There are applications which contain a large number of tuning parameters and constraints, for example one case had 50 parameters, 58 constraints and $ 8.81 * 10^{18} $ valid configurations.
+
+Efficient generating and storage of tuning configurations was introduced in ATF framework \cite{rash2021configurations}. It combines multiple individual optimizations which make it possible to handle larger spaces:
+
+\begin{itemize}
+	\item Better storage of tuning configurations -- Autotuning frameworks previously generated all tuning configurations preemptively and stored them in memory. Each configuration contained an array of tuning parameter names and values. This was very inefficient for spaces that contained very large number of configurations. ATF framework introduced an intermediate structure called configuration trees. This structure is still generated in advance, but it stores configurations in such a way that each level of depth inside the tree contains valid values for a single tuning parameter. Each path in the tree from root to leaf represents a unique configuration. During the space exploration, the configurations are retrieved from the tree. The tree introduces a small overhead during the exploration phase but it provides a significant improvement in memory utilization.
+	\item Dependencies between parameters and constraints -- Constraints are usually defined between a smaller number of tuning parameters. Some parameters may share multiple constraints which leads to interdependencies (including transitive ones) between smaller groups of different tuning parameters. These groups can be discovered and evaluated independently instead of handling all of the parameters and constraints together. This can be combined with the configuration trees, so that each of these groups is stored inside a separate tree. Individual parts of a tuning configuration from separate trees are then merged together during the space exploration to create a complete configuration. Additionally, these trees can be generated in parallel which further improves the performance. In ATF framework, the parameter dependencies have to be defined explicitly by an application programmer. KTT introduced a smaller improvement where these dependencies are derived automatically by the framework.
+	\item Efficient constraint evaluation -- Previously, the constraints were usually evaluated per configuration which led to a significant performance penalty. With the introduction of configuration trees, constraints can be evaluated in a much more efficient way. The parameters inside the trees can be sorted, so the parameters with a lower number of constraints can be put closer to the root of a tree. These simpler constraints are then evaluated earlier and many invalid configurations can be eliminated without evaluating the more complicated constraints. Furthemore, the constraints are not evaluated per configuration but rather on the nodes inside a tree. Each of these nodes represents a single value for some tuning parameter and is shared by many configurations. This makes it possible to check validity for a large number of configurations with a single constraint evaluation.
+\end{itemize}
 
 \section{Configuration space exploration}
 Todo
@@ -271,7 +291,7 @@ Todo
 \printbibliography[heading=bibintoc]
 
 \appendix
-\chapter{An appendix}
+\chapter{Appendix}
 Todo
 
 \end{document}
